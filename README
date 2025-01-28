@@ -2,20 +2,31 @@
 
 This project is mainly for the installation of each MALT at the "Centre de Primatologie de Strasbourg".
 
-You will find ressources to install the package OMM with some modified codes from the original version that you can find here: "https://github.com/open-cogsci/omm-client"
+You will find resources to install the package OMM with some modified codes from the original version that you can find here: [OMM GitHub Repository](https://github.com/open-cogsci/omm-client).
 
-Here is the list of the main modifications:  
-- OMM conditioner: JuicePumpCdp ; a new conditioner that allows you to send a "start character", a "stop character" and a "duration" in seconds that defines the time between each sending of character. You also have the check box "Juice". Example of usage: Our pump with its interface card works this you need to send px (x being a number between 0 and 9 or m) that defines the power of the pump (m being maximal) and to turn it off "p0"
+Here is the list of the main modifications:
 
-- OMM detect participant: You can read two Serial ports at "a time" which in the case of the "Centre de Primatologie de Strasbourg" is very usefull as we have 2 RFID detectors. Furthermore the code has been modified to enable the detection on 15 Bytes with a sperator as a ";" between each RFID
+- **OMM Conditioner: JuicePumpCdp**  
+  A new conditioner that allows you to send a "start character", a "stop character", and a "duration" in seconds, which defines the time between each sending of the character. You also have the checkbox "Juice".  
+  Example of usage: Our pump with its interface card works this way: you need to send `px` (where `x` is a number between 0 and 9 or `m`) to define the power of the pump (`m` being maximal). To turn it off, send `p0`.
+
+- **OMM Detect Participant**  
+  You can read two serial ports "at the same time", which is very useful at the "Centre de Primatologie de Strasbourg" as we have 2 RFID detectors. Furthermore, the code has been modified to enable detection on 15 bytes with a separator, a `;`, between each RFID.
 
 ## How to install or update on a new mini-PC:
 
-1) Install OpenSesame: https://osdoc.cogsci.nl/4.0/download/#windows  
-2) Install the OMM library: pip install https://github.com/open-cogsci/omm-client/archive/refs/tags/prerelease/0.7.0a3.zip here is the link where each release are downloaded: https://github.com/open-cogsci/omm-client/releases/tag/prerelease%2F0.7.0a3  
-3) Modify each folder/file from this repository "OpenSesame\Lib\site-packages\opensesame_plugins\open_monkey_mind" by the new one on this GitHub (Install_folder_V1)  
-4) Switch the port COM for the RFID readers and the pump to this: This part is necessary because each is test is coded with those port COM as reference  
+1) **Install OpenSesame**: [Download OpenSesame](https://osdoc.cogsci.nl/4.0/download/#windows)  
+2) **Install the OMM library**:  
+   `pip install https://github.com/open-cogsci/omm-client/archive/refs/tags/prerelease/0.7.0a3.zip`  
+   Here is the link where each release is downloaded: [OMM Releases](https://github.com/open-cogsci/omm-client/releases/tag/prerelease%2F0.7.0a3)  
+3) **Modify each folder/file from this repository**  
+   Replace the contents of the folder `OpenSesame\Lib\site-packages\opensesame_plugins\open_monkey_mind` with the new ones from this GitHub (folder `Install_folder_V1`).
+4) **Switch the COM ports for the RFID readers and the pump to the following**:  
+   This step is necessary because each test is coded with these COM ports as references.  
    - Pump = Port COM24  
    - RFID Reader = Port COM23  
    - RFID Reader = Port COM22  
-5) In OpenSesame go to "Tools > Preferences" and slide down until you find "Entry point (for connecting to the server)" clic on it after you have checked that just above the server is well parametred and connected. Then you need to do 2 things: 1st: change the wait image with image of banana that you can download in the folder "Set_of_Essentials" in this GitHub. 2nd: Change the Serial ports of the "detect"
+5) **In OpenSesame**, go to "Tools > Preferences" and scroll down until you find "Entry point (for connecting to the server)".  
+   Click on it after you have verified that the server is correctly configured and connected. Then you need to do 2 things:
+   1. Change the wait image to an image of a banana, which you can download from the "Set_of_Essentials" folder in this GitHub.
+   2. Change the serial ports for the "detect" condition.
