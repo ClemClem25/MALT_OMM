@@ -1,1 +1,9 @@
+This project is mainly for the installation of each MALT at the "Centre de Primatologie de Strasbourg"
 
+You will find ressources to install the package OMM with some modified codes from the original version that you can find here :"https://github.com/open-cogsci/omm-client" 
+
+Here is the list of the main modifications : 
+    - OMM conditioner : JuicePumpCdp ; a new conditioner that allows you to send a "start character", a "stop character" and a "duration" in seconds that defines the time between each sending of character. You also have the check box "Juice".
+Example of usage : Our pump with its interface card works this you need to send px (x being a number between 0 and 9 or m) that defines the power of the pump (m being maximal) and to turn it off "p0"
+
+    - OMM detect participant : You can read two Serial ports at "a time" which in the case of the "Centre de Primatologie de Strasbourg" is very usefull as we have 2 RFID detectors. Furthermore the code has been modified to enable the detection on 15 Bytes with a sperator as a ";" between each RFID
