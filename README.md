@@ -4,7 +4,7 @@ This project is mainly for the installation of each MALT at the "Centre de Prima
 
 You will find resources to install the orignal OMM package here : [OMM GitHub Repository](https://github.com/open-cogsci/omm-client).
 
-In this GitHub you have a modified version of some OMM files, that are specific for the usage at the "Centre de Primatoologie de Strasbourg".
+In this GitHub you have a modified version of some OMM files, that are specific for the usage at the "Centre de Primatologie de Strasbourg".
 
 Here is the list of the main modifications:
 
